@@ -75,7 +75,7 @@ export const Market: React.FC = () => {
           style={{ 
             width: size, 
             height: size,
-            clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)'
+           
           }}
         >
           <span className="text-xs font-mono">{coin.symbol?.slice(0, 2) || "??"}</span>
@@ -85,11 +85,11 @@ export const Market: React.FC = () => {
 
     return (
       <div 
-        className="relative overflow-hidden shadow-2xl border-2 border-cyan-400/50"
+        className="relative overflow-hidden shadow-2xl rounded-full "
         style={{ 
           width: size, 
           height: size,
-          clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)'
+         
         }}
       >
         <Image
@@ -97,7 +97,7 @@ export const Market: React.FC = () => {
           width={size}
           height={size}
           alt={`${coin.name || coin.symbol} logo`}
-          className="object-cover"
+          className="object-cover h-full   "
           onError={() => handleImageError(coin.symbol)}
           unoptimized
         />
@@ -165,7 +165,7 @@ export const Market: React.FC = () => {
             {marketData.map((coin, index) => (
               <div
                 key={coin.symbol}
-                className="group relative bg-gradient-to-br from-gray-900/60 to-black/60 backdrop-blur-xl border-2 border-gray-700/50 hover:border-cyan-400/70 transition-all duration-500 hover:scale-105 overflow-hidden p-6 shadow-2xl hover:shadow-cyan-500/30"
+                className="group relative bg-white/5  hover:border-cyan-400/70 transition-all duration-500 hover:scale-105 overflow-hidden p-6 shadow-2xl hover:shadow-cyan-500/30"
                 style={{
                   clipPath: 'polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)',
                   animationDelay: `${index * 0.1}s`
@@ -182,7 +182,7 @@ export const Market: React.FC = () => {
                   {/* Header */}
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center space-x-4">
-                      <CryptoLogo coin={coin} size={56} />
+                      <CryptoLogo coin={coin} size={56}  />
                       <div>
                         <h4 className="font-black text-lg text-cyan-100 uppercase tracking-wide font-mono">{coin.name}</h4>
                         <p className="text-cyan-400/80 text-sm font-mono uppercase tracking-widest">{coin.symbol}</p>
@@ -195,7 +195,7 @@ export const Market: React.FC = () => {
                           ? "bg-gradient-to-r from-green-500/30 to-emerald-500/30 text-green-300 border-2 border-green-400/50 shadow-[0_0_15px_rgba(0,255,0,0.3)]"
                           : "bg-gradient-to-r from-red-500/30 to-pink-500/30 text-red-300 border-2 border-red-400/50 shadow-[0_0_15px_rgba(255,0,0,0.3)]"
                       }`}
-                      style={{clipPath: 'polygon(20% 0%, 100% 0%, 80% 100%, 0% 100%)'}}
+                      
                     >
                       {coin.change >= 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
                       {formatChange(coin.change)}
@@ -224,7 +224,7 @@ export const Market: React.FC = () => {
                     
                     {/* Cyberpunk Progress Bar */}
                     <div className="w-full bg-gray-800 h-2 relative overflow-hidden"
-                         style={{clipPath: 'polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%)'}}>
+                        >
                       <div 
                         className={`h-2 transition-all duration-1000 ${
                           coin.change >= 0 
@@ -243,10 +243,10 @@ export const Market: React.FC = () => {
                 <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-pink-400 opacity-60 group-hover:opacity-100 transition-opacity"></div>
                 <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-cyan-400 opacity-60 group-hover:opacity-100 transition-opacity"></div>
                 
-                {/* Data Stream Indicator */}
+                {/* Data Stream Indicator
                 <div className="absolute top-2 left-1/2 transform -translate-x-1/2 text-xs font-mono text-cyan-400 opacity-50 group-hover:opacity-100 transition-opacity">
                   ID#{index.toString().padStart(3, '0')}
-                </div>
+                </div> */}
               </div>
             ))}
           </div>

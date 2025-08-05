@@ -184,7 +184,7 @@
   },
  "contact": {
   "title": "Kontaktieren Sie unser Krypto-Team",
-  "backToHome": "← Zurück zur Startseite",
+  "backToHome": "Zurück zur Startseite",
   "subtitle": "Ob Sie Fragen zu Mining, Wallets oder Dezentralisierung haben – wir helfen weiter.",
   "general": {
     "title": "Allgemeine Kryptofragen",
@@ -467,106 +467,7 @@
     "backToHome": "Zurück zur Startseite",
     "lastUpdated": "Zuletzt aktualisiert: Januar 2024"
   },
-  "cookiePolicy": {
-  "title": "Cookie-Richtlinie",
-  "whatAreCookies": {
-    "title": "1. Was sind Cookies",
-    "content": "Cookies sind kleine Textdateien, die auf Ihrem Gerät gespeichert werden, wenn Sie unsere Website besuchen. Sie helfen uns, Ihnen eine bessere Erfahrung zu bieten."
-  },
-  "typesOfCookies": {
-    "title": "2. Arten von Cookies, die wir verwenden",
-    "essential": "Essenzielle Cookies: Erforderlich, damit die Website ordnungsgemäß funktioniert, einschließlich Authentifizierungs- und Sicherheitsfunktionen.",
-    "analytics": "Analyse-Cookies: Helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem sie anonyme Informationen sammeln.",
-    "functional": "Funktionale Cookies: Ermöglichen erweiterte Funktionen und Personalisierung, wie das Merken Ihrer Präferenzen.",
-    "marketing": "Marketing-Cookies: Werden verwendet, um Besucher über Websites hinweg zu verfolgen und relevante Werbung anzuzeigen."
-  },
-  "thirdPartyCookies": {
-    "title": "3. Cookies von Drittanbietern",
-    "content": "Wir können Dienste von Drittanbietern nutzen, die Cookies auf Ihrem Gerät setzen, einschließlich Google Analytics und Werbepartner."
-  },
-  "managingCookies": {
-    "title": "4. Verwaltung von Cookies",
-    "content": "Sie können Cookies über Ihre Browsereinstellungen kontrollieren. Das Deaktivieren bestimmter Cookies kann jedoch die Funktionalität der Website beeinträchtigen."
-  },
-  "cookieConsent": {
-    "title": "5. Cookie-Einwilligung",
-    "content": "Durch die weitere Nutzung unserer Website stimmen Sie der Verwendung von Cookies gemäß dieser Richtlinie zu."
-  },
-  "updates": {
-    "title": "6. Aktualisierungen dieser Richtlinie",
-    "content": "Wir können diese Cookie-Richtlinie von Zeit zu Zeit aktualisieren. Änderungen werden auf dieser Seite mit einem aktualisierten Datum veröffentlicht."
-  }
-},
-"termsOfService": {
-  "title": "Nutzungsbedingungen",
-  "acceptance": {
-    "title": "1. Annahme der Bedingungen",
-    "content": "Durch den Zugriff auf und die Nutzung von Cryptox akzeptieren und stimmen Sie zu, an die Bedingungen dieses Vertrags gebunden zu sein."
-  },
-  "tradingServices": {
-    "title": "2. Handelsdienstleistungen",
-    "content": "Cryptox bietet Kryptowährungshandelsdienste an. Alle Transaktionen erfolgen auf eigenes Risiko."
-  },
-  "accountSecurity": {
-    "title": "3. Kontosicherheit",
-    "content": "Sie sind verantwortlich für die Vertraulichkeit Ihrer Kontodaten und für alle Aktivitäten, die unter Ihrem Konto stattfinden."
-  },
-  "riskDisclosure": {
-    "title": "4. Risikohinweis",
-    "content": "Der Handel mit Kryptowährungen beinhaltet ein erhebliches Verlustrisiko und ist nicht für alle Anleger geeignet. Vergangene Ergebnisse sind kein Indikator für zukünftige Entwicklungen."
-  },
-  "feesAndCharges": {
-    "title": "5. Gebühren und Kosten",
-    "content": "Auf alle Transaktionen fallen Handelsgebühren an. Die Gebührentabellen sind auf unserer Website verfügbar und können von Zeit zu Zeit aktualisiert werden."
-  },
-  "prohibitedActivities": {
-    "title": "6. Verbotene Aktivitäten",
-    "content": "Nutzer dürfen sich nicht an Marktmanipulation, Geldwäsche oder anderen illegalen Aktivitäten auf unserer Plattform beteiligen."
-  },
-  "limitationOfLiability": {
-    "title": "7. Haftungsbeschränkung",
-    "content": "Cryptox haftet nicht für indirekte, zufällige, spezielle, Folgeschäden oder Strafschadensersatzansprüche."
-  },
-  "termination": {
-    "title": "8. Kündigung",
-    "content": "Wir behalten uns das Recht vor, Ihr Konto jederzeit bei Verstoß gegen diese Bedingungen zu kündigen oder zu sperren."
-  }
-},
-"privacyPolicy": {
-  "title": "Datenschutzerklärung",
-  "informationWeCollect": {
-    "title": "1. Informationen, die wir sammeln",
-    "content": "Wir sammeln Informationen, die Sie uns direkt bereitstellen, z. B. wenn Sie ein Konto erstellen, Trades tätigen oder mit unserem Support kommunizieren."
-  },
-  "howWeUseInfo": {
-    "title": "2. Wie wir Ihre Informationen verwenden",
-    "content": "Wir verwenden Ihre Informationen, um unsere Dienste bereitzustellen, zu warten und zu verbessern, Transaktionen zu verarbeiten und mit Ihnen zu kommunizieren."
-  },
-  "informationSharing": {
-    "title": "3. Weitergabe von Informationen",
-    "content": "Wir verkaufen, handeln oder übertragen Ihre personenbezogenen Daten nicht an Dritte ohne Ihre Zustimmung, außer wie in dieser Richtlinie beschrieben."
-  },
-  "dataSecurity": {
-    "title": "4. Datensicherheit",
-    "content": "Wir setzen angemessene Sicherheitsmaßnahmen ein, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Änderung, Offenlegung oder Zerstörung zu schützen."
-  },
-  "cookiesAndTracking": {
-    "title": "5. Cookies und Tracking",
-    "content": "Wir verwenden Cookies und ähnliche Technologien, um Ihre Erfahrung zu verbessern, Nutzungsmuster zu analysieren und Inhalte zu personalisieren."
-  },
-  "dataRetention": {
-    "title": "6. Aufbewahrung von Daten",
-    "content": "Wir bewahren Ihre Informationen so lange auf, wie es zur Erbringung unserer Dienste und zur Einhaltung gesetzlicher Verpflichtungen notwendig ist."
-  },
-  "yourRights": {
-    "title": "7. Ihre Rechte",
-    "content": "Sie haben das Recht, auf Ihre personenbezogenen Daten zuzugreifen, diese zu aktualisieren oder zu löschen. Kontaktieren Sie uns, um diese Rechte auszuüben."
-  },
-  "internationalTransfers": {
-    "title": "8. Internationale Übertragungen",
-    "content": "Ihre Daten können in Länder außerhalb Ihres Wohnsitzlandes übertragen und dort verarbeitet werden, vorbehaltlich angemessener Schutzmaßnahmen."
-  }
-},
+
 "support": {
   "contactUs": {
     "title": "Kontaktieren Sie uns",
@@ -856,7 +757,7 @@
   },
 
   "Cookie": {
-    "backToHome": "← Zurück zur Cryptox-Seite",
+    "backToHome": "Zurück zur Startseite",
     "title": "Nutzung von Krypto-Daten",
     "description": "Erfahre, wie Cryptox Blockchain-Daten nutzt, um Handel transparenter und sicherer zu gestalten.",
     "section1": {
@@ -1070,88 +971,7 @@
   }
 },
 
-"ContactPage": {
-  "getInTouch": "Kontakt aufnehmen",
-  "introText": "Haben Sie eine Frage oder benötigen Sie Unterstützung? Wir sind für Sie da. Kontaktieren Sie uns über die untenstehenden Kanäle oder füllen Sie das Formular aus.",
-  "generalInquiries": {
-    "title": "Allgemeine Anfragen",
-    "description": "Für allgemeine Fragen zu unseren Dienstleistungen und zum Unternehmen.",
-    "hours": "Montag – Freitag, 9–17 Uhr EST"
-  },
-  "technicalSupport": {
-    "title": "Technischer Support",
-    "description": "Für technische Probleme, Produktunterstützung und Fehlerbehebung.",
-    "hours": "24/7 verfügbar"
-  },
-  "partnerships": {
-    "title": "Partnerschaften & Medien",
-    "description": "Für Geschäftszusammenarbeit, Presseanfragen und Medienkontakte.",
-    "hours": "Montag – Freitag, 10–16 Uhr EST"
-  },
-  "email": "E-Mail",
-  "phone": "Telefon",
-  "form": {
-    "title": "Senden Sie uns eine Nachricht",
-    "description": "Füllen Sie das untenstehende Formular aus und wir melden uns so schnell wie möglich bei Ihnen.",
-    "name": "Name",
-    "namePlaceholder": "Ihr vollständiger Name",
-    "email": "E-Mail",
-    "emailPlaceholder": "ihre@email.de",
-    "subject": "Betreff",
-    "subjectPlaceholder": "Wählen Sie einen Betreff",
-    "subjectOptions": {
-      "general": "Allgemeine Anfrage",
-      "technical": "Technischer Support",
-      "billing": "Abrechnungsfrage",
-      "partnership": "Partnerschaftsanfrage",
-      "other": "Andere"
-    },
-    "message": "Nachricht",
-    "messagePlaceholder": "Wie können wir Ihnen helfen?",
-    "sendButton": "Nachricht senden"
-  },
-  "locations": {
-    "title": "Unsere Standorte",
-    "newYork": {
-      "title": "New York (Hauptsitz)",
-      "address1": "Tech Avenue 123",
-      "address2": "New York, NY 10001",
-      "country": "Vereinigte Staaten"
-    },
-    "london": {
-      "title": "London",
-      "address1": "Innovation Street 45",
-      "address2": "London EC1A 1BB",
-      "country": "Vereinigtes Königreich"
-    },
-    "singapore": {
-      "title": "Singapur",
-      "address1": "Silicon Road 78",
-      "address2": "Singapur 018906",
-      "country": "Singapur"
-    }
-  },
-  "responseTimes": {
-    "title": "Schnelle Reaktionszeiten",
-    "description": "Wir bemühen uns, alle Anfragen schnell zu beantworten.",
-    "liveChat": {
-      "label": "Live-Chat",
-      "detail": "Sofortige Antwort während der Geschäftszeiten (sofern verfügbar)"
-    },
-    "emailSupport": {
-      "label": "E-Mail-Support",
-      "detail": "Innerhalb von 4 Stunden bei dringenden Anliegen, 24 Stunden bei allgemeinen Anfragen"
-    },
-    "phoneSupport": {
-      "label": "Telefon-Support",
-      "detail": "Minimale Wartezeit während der Geschäftszeiten"
-    },
-    "businessInquiries": {
-      "label": "Geschäftsanfragen",
-      "detail": "Innerhalb eines Werktags"
-    }
-  }
-},
+
 
 
 

@@ -21,14 +21,14 @@ const page = () => {
         </div>
 
         <div className="relative z-10">
-          <Link
-            href="/"
-            className="inline-flex items-center px-8 py-4 rounded-2xl border border-gray-600/40 text-base font-bold text-white shadow-xl mb-12"
-          >
-            <Home className="h-6 w-6 mr-3" />
-            {t("backToHome")}
-            <ArrowRight className="h-5 w-5 ml-3 rotate-180" />
-          </Link>
+        <Link 
+              href="/" 
+              className='inline-flex items-center px-6 py-3 mb-14 text-white bg-violet-500/10 backdrop-blur-sm rounded-full border border-violet-300/30 hover:bg-violet-500/20 hover:border-violet-400/40 transition-all duration-300 group text-sm font-medium  shadow-lg hover:shadow-violet-500/20'
+            >
+              <Home className='h-4 w-4 mr-2 text-white group-hover:-translate-x-1 transition-transform duration-300' />
+              {t('backToHome')}
+              <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
+            </Link>
 
           <div className="max-w-5xl mx-auto mt-8 space-y-12">
             <div className="text-center mb-16">
@@ -69,9 +69,7 @@ const page = () => {
                   <ol className="space-y-4 text-gray-300 text-lg font-medium">
                     {[1, 2].map((step) => (
                       <li key={step} className="flex items-start gap-4">
-                        <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-sm">
-                          {step}
-                        </div>
+                        <div className="w-2 h-2 bg-purple-400 rounded-full mt-3"></div>
                         <span>{t(`buy.step${step}`)}</span>
                       </li>
                     ))}

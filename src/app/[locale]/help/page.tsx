@@ -98,14 +98,14 @@ const Page = () => {
           <section className="text-center mb-24">
             {/* Back to Home Link */}
             <div className='flex justify-start mb-12'>
-              <Link 
-                href="/" 
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-800/80 to-slate-800/80 backdrop-blur-xl rounded-2xl border border-gray-600/40 hover:from-gray-700/80 hover:to-slate-700/80 hover:border-violet-400/50 transition-all duration-300 group text-base font-bold text-white shadow-xl hover:shadow-violet-500/20 hover:scale-105'
-              >
-                <Home className='h-6 w-6 mr-3 group-hover:-translate-x-1 transition-transform duration-300 text-white' />
-                {t('backToHome')}
-                <ArrowRight className='h-5 w-5 ml-3 rotate-180 group-hover:-translate-x-1 transition-transform duration-300 text-white' />
-              </Link>
+              <Link
+                  href="/"
+                  className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
+                >
+                  <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
+                  {t('backToHome')}
+                  <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
+                </Link>
             </div>
 
             {/* Hero Badge */}

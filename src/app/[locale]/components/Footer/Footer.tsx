@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
-import { Cpu, Rocket, Zap } from 'lucide-react';
+import { Cpu, Feather, Rocket, Zap } from 'lucide-react';
 
 export default function Footer() {
   const tFooter = useTranslations('footer');
@@ -62,10 +62,12 @@ export default function Footer() {
                   <div className="absolute -inset-1 bg-gradient-to-r from-green-500 to-cyan-500 blur opacity-40 transition duration-300 group-hover:opacity-60"
                        style={{clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)'}} />
                 </div>
-
-                <span className='text-3xl font-black uppercase tracking-wider bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]'>
-                  Cryptox
-                </span>
+                 <div className='flex gap-4 items-center'>
+                   <Feather size={24} className="text-white" />
+                                   <span className='text-3xl font-black uppercase tracking-wider bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(0,255,255,0.5)]'>
+                    Cryptox
+                                   </span>
+                 </div>
               </div>
               <p className='text-green-100 mb-6 max-w-sm text-lg leading-relaxed font-mono'>
                 {tFooter('description')}
@@ -136,15 +138,15 @@ export default function Footer() {
           </div>
           
           {/* Legal Info Section */}
-          <div className='relative bg-gradient-to-r from-gray-800/40 to-black/40 backdrop-blur-xl border-2 border-green-400/30 p-8 mb-12 overflow-hidden shadow-2xl shadow-green-400/20'
+          <div className='relative border-2 border-green-400/30 p-8 mb-12 overflow-hidden shadow-2xl shadow-green-400/20'
                style={{clipPath: 'polygon(2% 0%, 98% 0%, 100% 15%, 98% 100%, 2% 100%, 0% 85%)'}}>
             
             {/* Corner Circuits */}
-            <div className="absolute top-2 left-2 w-6 h-6 border-l-2 border-t-2 border-green-400/70 shadow-[0_0_10px_rgba(0,255,0,0.5)]"></div>
+            {/* <div className="absolute top-2 left-2 w-6 h-6 border-l-2 border-t-2 border-green-400/70 shadow-[0_0_10px_rgba(0,255,0,0.5)]"></div>
             <div className="absolute top-2 right-2 w-6 h-6 border-r-2 border-t-2 border-cyan-400/70 shadow-[0_0_10px_rgba(0,255,255,0.5)]"></div>
             <div className="absolute bottom-2 left-2 w-6 h-6 border-l-2 border-b-2 border-blue-400/70 shadow-[0_0_10px_rgba(0,100,255,0.5)]"></div>
             <div className="absolute bottom-2 right-2 w-6 h-6 border-r-2 border-b-2 border-purple-400/70 shadow-[0_0_10px_rgba(128,0,255,0.5)]"></div>
-            
+             */}
             {/* Data Stream Animation */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-400 to-transparent animate-pulse"></div>
             

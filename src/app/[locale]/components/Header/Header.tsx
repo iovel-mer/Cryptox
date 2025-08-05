@@ -45,7 +45,7 @@ export const Header: React.FC = () => {
               <Button className="group relative overflow-hidden flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold 
                 bg-gray-800/50 backdrop-blur-sm text-white border border-purple-400/30 shadow-lg
                 hover:bg-gray-700/50 hover:border-purple-400/50 hover:shadow-xl hover:scale-105
-                transition-all duration-300 ease-out">
+                transition-all duration-300 ease-out cursor-pointer">
                 
               
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
               <Button className="group relative overflow-hidden flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold 
                 bg-gray-800/50 backdrop-blur-sm text-white border border-purple-400/30 shadow-lg
                 hover:bg-gray-700/50 hover:border-purple-400/50 hover:shadow-xl hover:scale-105
-                transition-all duration-300 ease-out">
+                transition-all duration-300 ease-out cursor-pointer">
                 
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
@@ -96,7 +96,7 @@ export const Header: React.FC = () => {
               <Button className="group relative overflow-hidden flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold w-full
                 bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0 shadow-lg shadow-purple-500/25
                 hover:shadow-xl hover:shadow-purple-500/40 hover:scale-[1.02]
-                transition-all duration-300 ease-out">
+                transition-all duration-300 ease-out cursor-pointer">
                 
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
                 
@@ -109,7 +109,7 @@ export const Header: React.FC = () => {
               <Button className="group relative overflow-hidden flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold w-full
                 bg-gray-800/50 backdrop-blur-sm text-white border border-purple-400/30 shadow-lg
                 hover:bg-gray-700/50 hover:border-purple-400/50 hover:shadow-xl hover:scale-[1.02]
-                transition-all duration-300 ease-out">
+                transition-all duration-300 ease-out cursor-pointer">
                 
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>

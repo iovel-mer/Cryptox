@@ -184,7 +184,7 @@
   },
  "contact": {
   "title": "Contáctanos en el Mundo Cripto",
-  "backToHome": "← Regresar al Inicio",
+  "backToHome": "Volver a la página de inicio",
   "subtitle": "Resuelve tus dudas sobre wallets, intercambios y seguridad Web3.",
   "general": {
     "title": "Soporte de Criptomonedas",
@@ -467,86 +467,7 @@
     "backToHome": "Volver al Inicio",
     "lastUpdated": "Última Actualización: Enero 2024"
   },
-  "cookiePolicy": {
-    "title": "Política de Cookies",
-    "whatAreCookies": {
-      "title": "1. Qué Son las Cookies",
-      "content": "Las cookies son pequeños archivos de texto almacenados en tu dispositivo cuando visitas nuestro sitio web. Nos ayudan a brindarte una mejor experiencia."
-    },
-    "typesOfCookies": {
-      "title": "2. Tipos de Cookies que Usamos",
-      "essential": "Cookies Esenciales: Requeridas para que el sitio web funcione correctamente, incluyendo características de autenticación y seguridad.",
-      "analytics": "Cookies de Análisis: Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web recopilando información anónima.",
-      "functional": "Cookies Funcionales: Habilitan funcionalidad mejorada y personalización, como recordar tus preferencias.",
-      "marketing": "Cookies de Marketing: Utilizadas para rastrear visitantes a través de sitios web para mostrar anuncios relevantes."
-    },
-    "thirdPartyCookies": {
-      "title": "3. Cookies de Terceros",
-      "content": "Podemos usar servicios de terceros que establecen cookies en tu dispositivo, incluyendo Google Analytics y socios publicitarios."
-    },
-    "managingCookies": {
-      "title": "4. Gestión de Cookies",
-      "content": "Puedes controlar las cookies a través de la configuración de tu navegador. Sin embargo, deshabilitar ciertas cookies puede afectar la funcionalidad del sitio web."
-    },
-    "cookieConsent": {
-      "title": "5. Consentimiento de Cookies",
-      "content": "Al continuar usando nuestro sitio web, consientes nuestro uso de cookies como se describe en esta política."
-    },
-    "updates": {
-      "title": "6. Actualizaciones de Esta Política",
-      "content": "Podemos actualizar esta Política de Cookies de vez en cuando. Los cambios se publicarán en esta página con una fecha de revisión actualizada."
-    }
-  },
-  "termsOfService": {
-    "title": "Términos de Servicio",
-    "acceptance": {
-      "title": "1. Aceptación de Términos",
-      "content": "Al acceder y usar Cryptox, aceptas y acuerdas estar sujeto a los términos y disposiciones de este acuerdo."
-    },
-    "tradingServices": {
-      "title": "2. Servicios de Trading",
-      "content": "Cryptox proporciona servicios de trading de criptomonedas. Todas las operaciones se ejecutan bajo tu propio riesgo."
-    },
-    "accountSecurity": {
-      "title": "3. Seguridad de Cuenta",
-      "content": "Eres responsable de mantener la confidencialidad de las credenciales de tu cuenta y de todas las actividades que ocurran bajo tu cuenta."
-    },
-    "riskDisclosure": {
-      "title": "4. Divulgación de Riesgo",
-      "content": "El trading de criptomonedas implica un riesgo sustancial de pérdida y no es adecuado para todos los inversores. El rendimiento pasado no es indicativo de resultados futuros."
-    },
-    "feesAndCharges": {
-      "title": "5. Tarifas y Cargos",
-      "content": "Se aplican tarifas de trading a todas las transacciones. Los horarios de tarifas están disponibles en nuestro sitio web y pueden actualizarse de vez en cuando."
-    },
-    "prohibitedActivities": {
-      "title": "6. Actividades Prohibidas",
-      "content": "Los usuarios no pueden participar en manipulación del mercado, lavado de dinero o cualquier otra actividad ilegal en nuestra plataforma."
-    },
-    "limitationOfLiability": {
-      "title": "7. Limitación de Responsabilidad",
-      "content": "Cryptox no será responsable de ningún daño indirecto, incidental, especial, consecuencial o punitivo."
-    },
-    "termination": {
-      "title": "8. Terminación",
-      "content": "Nos reservamos el derecho de terminar o suspender tu cuenta en cualquier momento por violación de estos términos."
-    }
-  },
-  "privacyPolicy": {
-    "title": "Política de Privacidad",
-    "informationWeCollect": {
-      "title": "1. Información que Recopilamos",
-      "content": "Recopilamos información que nos proporcionas directamente, como cuando creas una cuenta, realizas operaciones o te comunicas con nosotros para soporte."
-    },
-    "howWeUseInfo": {
-      "title": "2. Cómo Usamos Tu Información",
-      "content": "Usamos tu información para proporcionar, mantener y mejorar nuestros servicios, procesar transacciones y comunicarnos contigo."
-    },
-    "informationSharing": {
-      "title": "3. Compartir Información",
-      "content": "No vendemos, comercializamos o transferimos tu información personal a terceros sin tu consentimiento, excepto como se describe en esta política."
-    }
-  },
+ 
   "dataSecurity": {
       "title": "4. Seguridad de Datos",
       "content": "Implementamos medidas de seguridad apropiadas para proteger tu información personal contra acceso no autorizado, alteración, divulgación o destrucción."
@@ -900,7 +821,7 @@
     }
   },
   "Cookie": {
-    "backToHome": "← Volver a la página de Cryptox",
+    "backToHome": "Volver a la página de inicio",
     "title": "Aviso sobre datos en cadena",
     "description": "Conoce cómo Cryptox utiliza datos en blockchain para mejorar la experiencia de trading.",
     "section1": {
@@ -1065,20 +986,7 @@
       }
     }
   },
-  "ContactPage": {
-    "getInTouch": "Ponte en Contacto",
-    "introText": "¿Tienes una pregunta o necesitas soporte? Estamos aquí para ayudar. Contáctanos a través de los canales de abajo, o llena el formulario.",
-    "generalInquiries": {
-      "title": "Consultas Generales",
-      "description": "Para preguntas generales sobre nuestros servicios y empresa.",
-      "hours": "Lunes – Viernes, 9 AM – 5 PM EST"
-    },
-    "technicalSupport": {
-      "title": "Soporte Técnico",
-      "description": "Para problemas técnicos, ayuda con productos y solución de problemas.",
-      "hours": "Disponible 24/7"
-    }
-},
+ 
 "partnerships": {
     "title": "Colaboraciones y Medios",
     "description": "Para colaboraciones comerciales, consultas de prensa y solicitudes de medios.",

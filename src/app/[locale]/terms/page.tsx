@@ -18,15 +18,16 @@ export default function TermsOfService() {
         <div className="relative z-10 max-w-5xl w-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl shadow-lg p-8 sm:p-12">
           {/* Navigation link */}
           <div className="mb-8">
-            <Link 
-              href="/" 
-              className="inline-flex items-center px-5 py-2.5 bg-indigo-700/20 hover:bg-indigo-700/40 border border-indigo-500/30 text-indigo-100 rounded-full text-sm font-medium transition-all duration-300 group"
-            >
-              <Home className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300" />
-              {t('goBackHome')}
-              <ArrowRight className="h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300" />
-            </Link>
+              <Link
+                  href="/"
+                  className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
+                >
+                  <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
+                  {t('backToHome')}
+                  <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
+                </Link>
           </div>
+         
 
           {/* Title */}
           <h1 className="text-5xl font-bold mb-10  bg-clip-text text-white">

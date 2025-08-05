@@ -27,19 +27,19 @@ export default function CookiePage() {
           <div className="max-w-6xl mx-auto">
             
             {/* Header Section */}
-            <div className="text-center mb-16">
-              <Link 
-                href="/" 
-                className='inline-flex items-center px-8 py-4  rounded-2xl border border-amber-400/30  text-sm font-bold text-white shadow-lg mb-12'
-              >
-                <Home className='h-5 w-5 mr-3 group-hover:scale-110 transition-transform duration-300 ' />
-                <span>{t('backToHome')}</span>
-                <ArrowRight className='h-5 w-5 ml-3 rotate-180 group-hover:scale-110 transition-transform duration-300 ' />
-              </Link>
+            <div className="text-center mb-16 ">
+               <Link
+                  href="/"
+                  className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
+                >
+                  <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
+                  {t('backToHome')}
+                  <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
+                </Link>
               
              
 
-              <h1 className="text-6xl md:text-7xl font-black mb-6 text-white  animate-pulse">
+              <h1 className="text-6xl md:text-7xl font-black mb-6 text-white mt-8  animate-pulse">
                 {t("title")}
               </h1>
               
@@ -113,8 +113,7 @@ export default function CookiePage() {
           </div>
         </div>
         
-        {/* Bottom Gradient Line */}
-        <div className="absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r from-amber-500 via-orange-500 to-amber-500 opacity-50"></div>
+       
       </main>
     </>
   )

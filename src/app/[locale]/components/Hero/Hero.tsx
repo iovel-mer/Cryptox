@@ -121,9 +121,9 @@ export const Hero: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Link href={`/${locale}/login`}>
                 <Button className="group relative overflow-hidden flex items-center gap-3 px-8 py-4 rounded-full text-lg font-bold 
-                  bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white border-0 shadow-2xl shadow-cyan-500/30
+                  bg-blue-500 text-white border-0 shadow-2xl shadow-cyan-500/30
                   hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-110
-                  transition-all duration-500 ease-out">
+                  transition-all duration-500 ease-out cursor-pointer">
                   
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-pink-400 opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-full"></div>
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
@@ -173,7 +173,7 @@ export const Hero: React.FC = () => {
           <div className="lg:col-span-5">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl blur-2xl group-hover:blur-3xl transition-all duration-500 "></div>
-              <Card className="relative mb-40 bg-black/80 backdrop-blur-2xl border border-cyan-400/30 shadow-2xl shadow-cyan-500/20 rounded-3xl overflow-hidden hover:border-purple-400/50 hover:shadow-purple-500/30 transition-all duration-500">
+              <Card className="relative mb-58 bg-black/80 backdrop-blur-2xl border border-cyan-400/30 shadow-2xl shadow-cyan-500/20 rounded-3xl overflow-hidden hover:border-purple-400/50 hover:shadow-purple-500/30 transition-all duration-500">
                 <CardHeader className="p-6 border-b border-cyan-400/20 bg-gradient-to-r from-black/60 to-purple-900/20">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">

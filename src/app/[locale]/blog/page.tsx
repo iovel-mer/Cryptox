@@ -39,9 +39,9 @@ const Page = () => {
         <div className="max-w-6xl mx-auto">
          <Link 
               href="/" 
-              className='inline-flex items-center px-6 py-3 mb-14 bg-violet-500/10 backdrop-blur-sm rounded-full border border-violet-300/30 hover:bg-violet-500/20 hover:border-violet-400/40 transition-all duration-300 group text-sm font-medium text-black shadow-lg hover:shadow-violet-500/20'
+              className='inline-flex items-center px-6 py-3 mb-14 text-white bg-violet-500/10 backdrop-blur-sm rounded-full border border-violet-300/30 hover:bg-violet-500/20 hover:border-violet-400/40 transition-all duration-300 group text-sm font-medium  shadow-lg hover:shadow-violet-500/20'
             >
-              <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
+              <Home className='h-4 w-4 mr-2 text-white group-hover:-translate-x-1 transition-transform duration-300' />
               {t('backToHome')}
               <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
             </Link>
@@ -70,22 +70,21 @@ const Page = () => {
           
            
 
-            {/* Main Content */}
             <div className="lg:col-span-3">
               <article className="prose prose-lg prose-gray max-w-none">
-                {/* Overview */}
-                <section id="overview" className="mb-12">
-                  <Card className=" backdrop-blur-sm border-violet-200/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:shadow-violet-500/10">
-                    <CardContent className="p-8 text-black">
+                
+                <section id="overview" className="mb-12 ">
+                  <Card className="bg-black  backdrop-blur-sm border-violet-200/50 shadow-xl hover:shadow-2xl transition-all duration-300 hover:shadow-violet-500/10">
+                    <CardContent className="p-8 text-white">
                       <div className="flex items-center gap-3 mb-6">
                         <div className="p-3 b rounded-xl shadow-sm">
                           <BookOpen className="w-6 h-6" />
                         </div>
-                        <h2 className="text-2xl font-semibold text-black m-0">
+                        <h2 className="text-2xl font-semibold text-white m-0">
                           {t("overview.title")}
                         </h2>
                       </div>
-                      <p className="text-black leading-relaxed m-0">
+                      <p className="text-white leading-relaxed m-0">
                         {t("overview.content")}
                       </p>
                     </CardContent>
