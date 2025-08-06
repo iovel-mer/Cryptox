@@ -259,7 +259,7 @@
     }
   },
   "terms": {
-    "goBackHome": "Back to Home",
+    "backToHome": "Back to Home",
     "title": "Terms & Conditions",
     "lastUpdated": "Last updated",
     "section1": {

@@ -129,7 +129,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Market Terminal */}
-          <div className="lg:col-span-5 w-full">
+          <div className="lg:col-span-5 w-full mb-85">
             <Card className="bg-black/80 border border-cyan-400/30 rounded-3xl overflow-hidden">
               <CardHeader className="p-4 sm:p-6 border-b border-cyan-400/20 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div className="flex items-center gap-4">

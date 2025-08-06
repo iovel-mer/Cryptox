@@ -288,7 +288,7 @@
     }
   },
   "terms": {
-    "goBackHome": "Volver al Inicio",
+    "backToHome": "Volver al Inicio",
     "title": "Términos y Condiciones",
     "lastUpdated": "Última actualización",
     "section1": {
