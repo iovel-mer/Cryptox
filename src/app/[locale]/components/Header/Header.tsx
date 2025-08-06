@@ -33,7 +33,7 @@ export const Header: React.FC = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent">
-                  Cryptox
+                  CryptoX
                 </h1>
               </div>
             </Link>

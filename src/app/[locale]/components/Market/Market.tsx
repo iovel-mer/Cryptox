@@ -6,7 +6,6 @@ import { getMarketData, type MarketData } from "@/app/api/market/actions"
 import { TrendingUp, TrendingDown, Activity, RefreshCw, BarChart3 } from "lucide-react"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
-import { log } from "console"
 
 export const Market: React.FC = () => {
   const [marketData, setMarketData] = useState<MarketData[]>([])
@@ -19,16 +18,14 @@ export const Market: React.FC = () => {
     try {
       setLoading(true)
       const result = await getMarketData()
-      console.log(result)
       if (result.success) {
         setMarketData(result.data as any)
         setError(null)
       } else {
         setError(result.error || t("errorGeneric"))
       }
-    } catch (err) {
+    } catch {
       setError(t("errorFetch"))
-      console.error("Market data fetch error:", err)
     } finally {
       setLoading(false)
     }
@@ -71,12 +68,8 @@ export const Market: React.FC = () => {
     if (hasError) {
       return (
         <div
-          className="flex items-center justify-center bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 text-white font-black shadow-2xl border-2 border-cyan-400/50"
-          style={{ 
-            width: size, 
-            height: size,
-           
-          }}
+          className="flex items-center justify-center bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 text-white font-black shadow-2xl border-2 border-cyan-400/50 rounded-full"
+          style={{ width: size, height: size }}
         >
           <span className="text-xs font-mono">{coin.symbol?.slice(0, 2) || "??"}</span>
         </div>
@@ -84,20 +77,16 @@ export const Market: React.FC = () => {
     }
 
     return (
-      <div 
-        className="relative overflow-hidden shadow-2xl rounded-full "
-        style={{ 
-          width: size, 
-          height: size,
-         
-        }}
+      <div
+        className="relative overflow-hidden shadow-2xl rounded-full"
+        style={{ width: size, height: size }}
       >
         <Image
           src={logoSrc}
           width={size}
           height={size}
           alt={`${coin.name || coin.symbol} logo`}
-          className="object-cover h-full   "
+          className="object-cover h-full"
           onError={() => handleImageError(coin.symbol)}
           unoptimized
         />
@@ -108,153 +97,94 @@ export const Market: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-purple-900 min-h-screen relative overflow-hidden">
       {/* Cyberpunk Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none" />
-      
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
+
       {/* Neon Orbs */}
-      <div className="absolute top-1/4 left-1/6 w-96 h-96 bg-gradient-conic from-cyan-400 via-purple-500 to-pink-500 rounded-full blur-3xl opacity-30 animate-spin" style={{animationDuration: '20s'}}></div>
-      <div className="absolute bottom-1/4 right-1/6 w-80 h-80 bg-gradient-conic from-green-400 via-blue-500 to-cyan-500 rounded-full blur-3xl opacity-25 animate-spin" style={{animationDuration: '25s', animationDirection: 'reverse'}}></div>
-      
+      <div className="absolute top-1/4 left-1/6 w-64 sm:w-80 md:w-96 h-64 sm:h-80 md:h-96 bg-gradient-conic from-cyan-400 via-purple-500 to-pink-500 rounded-full blur-3xl opacity-30 animate-spin" style={{ animationDuration: "20s" }} />
+      <div className="absolute bottom-1/4 right-1/6 w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 bg-gradient-conic from-green-400 via-blue-500 to-cyan-500 rounded-full blur-3xl opacity-25 animate-spin" style={{ animationDuration: "25s", animationDirection: "reverse" }} />
+
       {/* Scan Lines */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/10 to-transparent h-2 animate-pulse"></div>
-      
-      <div className="container mx-auto px-4 md:px-6 max-w-7xl relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-lg border-2 border-cyan-400/40 text-sm font-mono uppercase tracking-widest text-cyan-300 shadow-[0_0_30px_rgba(0,255,255,0.4)] mb-8"
-               style={{clipPath: 'polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%)'}}>
-            <Activity className="w-5 h-5 text-cyan-400 animate-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cyan-500/10 to-transparent h-2 animate-pulse" />
+
+      <div className="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16">
+          <div
+            className="inline-flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 backdrop-blur-lg border-2 border-cyan-400/40 text-xs sm:text-sm font-mono uppercase tracking-widest text-cyan-300 mb-6"
+            style={{ clipPath: "polygon(10% 0%, 90% 0%, 100% 25%, 100% 75%, 90% 100%, 10% 100%, 0% 75%, 0% 25%)" }}
+          >
+            <Activity className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400 animate-pulse" />
             <span>{t("badge")}</span>
           </div>
-          
-          <h3 className="text-5xl text-white md:text-6xl lg:text-7xl font-black mb-8 uppercase tracking-tight font-mono">
+
+          <h3 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-black mb-6 uppercase tracking-tight font-mono">
             {t("title")}
           </h3>
-          
-          <p className="text-lg text-cyan-100 max-w-3xl mx-auto font-mono leading-relaxed">
+
+          <p className="text-base sm:text-lg text-cyan-100 max-w-3xl mx-auto font-mono leading-relaxed">
             {t("description")}
           </p>
         </div>
 
         {loading ? (
-          <div className="flex flex-col items-center justify-center py-32">
+          <div className="flex flex-col items-center justify-center py-24 sm:py-32">
             <div className="relative">
-              <div className="w-24 h-24 border-4 border-cyan-500 border-t-transparent animate-spin shadow-[0_0_30px_rgba(0,255,255,0.6)]"
-                   style={{clipPath: 'polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)'}}></div>
-              <RefreshCw className="w-8 h-8 text-cyan-400 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-pulse" />
+              <div
+                className="w-16 sm:w-20 md:w-24 h-16 sm:h-20 md:h-24 border-4 border-cyan-500 border-t-transparent animate-spin"
+                style={{ clipPath: "polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)" }}
+              />
+              <RefreshCw className="w-6 sm:w-7 md:w-8 h-6 sm:h-7 md:h-8 text-cyan-400 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-pulse" />
             </div>
-            <p className="mt-8 text-cyan-200 text-xl font-mono uppercase tracking-wider">{t("loading")}</p>
-            <div className="mt-6 flex space-x-3">
-              <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce shadow-[0_0_10px_rgba(0,255,255,0.8)]"></div>
-              <div className="w-3 h-3 bg-purple-400 rounded-full animate-bounce shadow-[0_0_10px_rgba(128,0,255,0.8)]" style={{animationDelay: '0.1s'}}></div>
-              <div className="w-3 h-3 bg-pink-400 rounded-full animate-bounce shadow-[0_0_10px_rgba(255,20,147,0.8)]" style={{animationDelay: '0.2s'}}></div>
-            </div>
+            <p className="mt-6 text-cyan-200 text-lg font-mono uppercase tracking-wider">{t("loading")}</p>
           </div>
         ) : error ? (
-          <div className="text-center py-32">
-            <div className="bg-gradient-to-br from-red-900/50 to-black/50 backdrop-blur-xl border-2 border-red-500/50 p-12 max-w-lg mx-auto shadow-2xl shadow-red-500/30"
-                 style={{clipPath: 'polygon(5% 0%, 95% 0%, 100% 25%, 95% 100%, 5% 100%, 0% 75%)'}}>
-              <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center mx-auto mb-6 shadow-[0_0_20px_rgba(255,0,0,0.6)]"
-                   style={{clipPath: 'polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%)'}}>
-                <TrendingDown className="w-8 h-8 text-white" />
-              </div>
-              <p className="text-red-300 text-lg font-mono uppercase tracking-wide">{error}</p>
-            </div>
+          <div className="text-center py-24 sm:py-32">
+            <p className="text-red-300 text-lg font-mono uppercase tracking-wide">{error}</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8 place-items-center">
             {marketData.map((coin, index) => (
               <div
                 key={coin.symbol}
-                className="group relative bg-white/5  hover:border-cyan-400/70 transition-all duration-500 hover:scale-105 overflow-hidden p-6 shadow-2xl hover:shadow-cyan-500/30"
+                className="group relative w-full max-w-[300px] bg-white/5 hover:border-cyan-400/70 transition-all duration-500 hover:scale-105 overflow-hidden p-4 sm:p-6 shadow-2xl hover:shadow-cyan-500/30"
                 style={{
-                  clipPath: 'polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)',
-                  animationDelay: `${index * 0.1}s`
+                  clipPath: "polygon(15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%, 0% 15%)",
+                  animationDelay: `${index * 0.1}s`,
                 }}
               >
-                {/* Holographic Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                
-                {/* Scan Lines */}
-                <div className="absolute top-4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-4 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                
                 <div className="relative z-10">
-                  {/* Header */}
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="flex items-center space-x-4">
-                      <CryptoLogo coin={coin} size={56}  />
+                  <div className="flex items-start justify-between mb-4 sm:mb-6">
+                    <div className="flex items-center space-x-3 sm:space-x-4">
+                      <CryptoLogo coin={coin} size={48} />
                       <div>
-                        <h4 className="font-black text-lg text-cyan-100 uppercase tracking-wide font-mono">{coin.name}</h4>
-                        <p className="text-cyan-400/80 text-sm font-mono uppercase tracking-widest">{coin.symbol}</p>
+                        <h4 className="font-black text-base sm:text-lg text-cyan-100 uppercase tracking-wide font-mono">{coin.name}</h4>
+                        <p className="text-cyan-400/80 text-xs sm:text-sm font-mono uppercase">{coin.symbol}</p>
                       </div>
                     </div>
-                    
-                    <div
-                      className={`flex items-center gap-2 px-4 py-2 font-mono text-xs uppercase tracking-wider shadow-lg ${
-                        coin.change >= 0
-                          ? "bg-gradient-to-r from-green-500/30 to-emerald-500/30 text-green-300 border-2 border-green-400/50 shadow-[0_0_15px_rgba(0,255,0,0.3)]"
-                          : "bg-gradient-to-r from-red-500/30 to-pink-500/30 text-red-300 border-2 border-red-400/50 shadow-[0_0_15px_rgba(255,0,0,0.3)]"
-                      }`}
-                      
-                    >
-                      {coin.change >= 0 ? <TrendingUp className="w-4 h-4" /> : <TrendingDown className="w-4 h-4" />}
+                    <div className={`flex items-center gap-1 text-xs sm:text-sm font-mono ${coin.change >= 0 ? "text-green-300" : "text-red-300"}`}>
+                      {coin.change >= 0 ? <TrendingUp className="w-3 h-3 sm:w-4 sm:h-4" /> : <TrendingDown className="w-3 h-3 sm:w-4 sm:h-4" />}
                       {formatChange(coin.change)}
                     </div>
                   </div>
 
-                  {/* Price Section */}
-                  <div className="mb-6">
-                    <p className="text-4xl font-black text-white mb-2 tracking-tight font-mono drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+                  <div className="mb-4 sm:mb-6">
+                    <p className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-1 sm:mb-2 tracking-tight font-mono">
                       {formatPrice(coin.price)}
                     </p>
-                    <p className="text-cyan-300 text-sm font-mono uppercase tracking-wider flex items-center gap-2">
-                      <BarChart3 className="w-4 h-4" />
+                    <p className="text-cyan-300 text-xs sm:text-sm font-mono uppercase flex items-center gap-1 sm:gap-2">
+                      <BarChart3 className="w-3 h-3 sm:w-4 sm:h-4" />
                       {t("currentPrice")}
                     </p>
                   </div>
-
-                  {/* Movement Section */}
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center">
-                      <span className="text-cyan-200 font-mono text-sm uppercase tracking-wider">{t("movement")}</span>
-                      <span className={`font-black text-lg font-mono ${coin.change >= 0 ? "text-green-400" : "text-red-400"}`}>
-                        {Math.abs(coin.change).toFixed(2)}%
-                      </span>
-                    </div>
-                    
-                    {/* Cyberpunk Progress Bar */}
-                    <div className="w-full bg-gray-800 h-2 relative overflow-hidden"
-                        >
-                      <div 
-                        className={`h-2 transition-all duration-1000 ${
-                          coin.change >= 0 
-                            ? 'bg-gradient-to-r from-green-400 to-emerald-500 shadow-[0_0_10px_rgba(0,255,0,0.6)]' 
-                            : 'bg-gradient-to-r from-red-400 to-pink-500 shadow-[0_0_10px_rgba(255,0,0,0.6)]'
-                        }`}
-                        style={{ width: `${Math.min(Math.abs(coin.change) * 10, 100)}%` }}
-                      ></div>
-                    </div>
-                  </div>
                 </div>
-
-                {/* Corner Accents */}
-                <div className="absolute top-2 left-2 w-4 h-4 border-l-2 border-t-2 border-cyan-400 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute top-2 right-2 w-4 h-4 border-r-2 border-t-2 border-purple-400 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-2 left-2 w-4 h-4 border-l-2 border-b-2 border-pink-400 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                <div className="absolute bottom-2 right-2 w-4 h-4 border-r-2 border-b-2 border-cyan-400 opacity-60 group-hover:opacity-100 transition-opacity"></div>
-                
-                {/* Data Stream Indicator
-                <div className="absolute top-2 left-1/2 transform -translate-x-1/2 text-xs font-mono text-cyan-400 opacity-50 group-hover:opacity-100 transition-opacity">
-                  ID#{index.toString().padStart(3, '0')}
-                </div> */}
               </div>
             ))}
           </div>
         )}
       </div>
-      
-      {/* Bottom Neon Accent */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-80 shadow-[0_0_20px_rgba(0,255,255,0.5)]"></div>
+
+      {/* Bottom Accent */}
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500" />
     </section>
   )
 }
