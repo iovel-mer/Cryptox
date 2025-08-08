@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Header } from "../components/Header/Header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -18,6 +18,7 @@ import Link from "next/link";
 
 const Page = () => {
   const t = useTranslations("blog");
+  const locale = useLocale()
 
   const tableOfContents = [
     { id: "overview", title: t("overview.title"), icon: BookOpen },
@@ -36,9 +37,9 @@ const Page = () => {
     <div className="min-h-screen  bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative">
       <div className="absolute inset-0 z-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
       <main className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
          <Link 
-              href="/" 
+             href={`/${locale}`}
               className='inline-flex items-center px-6 py-3 mb-14 text-white bg-violet-500/10 backdrop-blur-sm rounded-full border border-violet-300/30 hover:bg-violet-500/20 hover:border-violet-400/40 transition-all duration-300 group text-sm font-medium  shadow-lg hover:shadow-violet-500/20'
             >
               <Home className='h-4 w-4 mr-2 text-white group-hover:-translate-x-1 transition-transform duration-300' />

@@ -21,10 +21,11 @@ import {
   Home,
 } from 'lucide-react';
 import { Header } from '../components/Header/Header';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 
 export default function SecurityPage() {
   const t = useTranslations('security');  
+  const locale = useLocale()
 
   return (
     <>
@@ -44,7 +45,7 @@ export default function SecurityPage() {
             <div className='animate-fade-in-up'>
               <div className='flex justify-start mb-8'>
                 <Link
-                  href="/"
+                  href={`/${locale}`}
                   className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
                 >
                   <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />

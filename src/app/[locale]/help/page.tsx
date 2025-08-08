@@ -1,6 +1,6 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { Header } from "../components/Header/Header";
 import {
@@ -22,6 +22,7 @@ import {
 
 const Page = () => {
   const t = useTranslations("help");
+   const locale = useLocale()
 
   const helpCategories = [
     {
@@ -78,28 +79,12 @@ const Page = () => {
     <>
       <Header />
       <main className=" bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative px-4 py-16 sm:px-6 lg:px-8 mx-auto min-h-screen overflow-hidden text-white">
-        {/* Animated Mesh Background */}
-        {/* <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(139,69,19,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(168,85,247,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_80%,rgba(6,182,212,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(-45deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:30px_30px] animate-pulse" style={{animationDuration: '4s'}}></div>
-        </div> */}
-
-        {/* Dynamic Floating Orbs */}
-        {/* <div className="absolute top-20 right-16 w-64 h-64 bg-gradient-to-br from-violet-500/30 to-fuchsia-500/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-32 left-20 w-80 h-80 bg-gradient-to-br from-teal-500/25 to-cyan-500/25 rounded-full blur-3xl animate-bounce" style={{animationDuration: '6s'}}></div>
-        <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 w-48 h-48 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-full blur-2xl animate-ping" style={{animationDuration: '3s'}}></div>
-        <div className="absolute bottom-1/4 right-1/3 w-56 h-56 bg-gradient-to-br from-emerald-500/20 to-green-500/20 rounded-full blur-3xl animate-pulse" style={{animationDuration: '5s'}}></div> */}
-
-        {/* Page Content */}
         <div className="relative z-10 max-w-7xl mx-auto">
-          {/* Hero Section */}
           <section className="text-center mb-24">
-            {/* Back to Home Link */}
+           
             <div className='flex justify-start mb-12'>
               <Link
-                  href="/"
+                 href={`/${locale}`}
                   className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
                 >
                   <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />

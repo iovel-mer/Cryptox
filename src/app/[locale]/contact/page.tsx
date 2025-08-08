@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import {
   Card,
@@ -29,6 +29,7 @@ const ContactPage = () => {
   const t = useTranslations("contact");
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const router = useRouter();
+   const locale = useLocale()
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -69,13 +70,17 @@ const ContactPage = () => {
     <>
       <Header />
       <div className="min-h-screen py-16 px-4 sm:px-6 lg:px-8  bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
-        {/* Enhanced Background Effects */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(236,72,153,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_75%_75%,rgba(59,130,246,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(251,146,60,0.1),transparent_60%)]"></div>
-          <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(-45deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:25px_25px] animate-pulse" style={{animationDuration: '6s'}}></div>
-        </div>
+        <div className='ml-5'>
+             <Link
+                 href={`/${locale}`}
+                  className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
+                >
+                  <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
+                  {t('backToHome')}
+                  <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
+                </Link>
+          </div>
+       
 
         {/* Floating Elements */}
         <div className="absolute top-20 right-16 w-48 h-48 bg-gradient-to-br from-pink-500/30 to-purple-500/30 rounded-full blur-3xl animate-pulse"></div>
@@ -84,16 +89,7 @@ const ContactPage = () => {
 
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Back to Home Link */}
-          <div className='flex justify-start mb-12'>
-             <Link
-                  href="/"
-                  className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
-                >
-                  <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
-                  {t('backToHome')}
-                  <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
-                </Link>
-          </div>
+          
 
           {/* Hero Section */}
           <div className="text-center mb-20">

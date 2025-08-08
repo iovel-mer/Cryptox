@@ -1,20 +1,29 @@
 "use client"
 
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Header } from "../components/Header/Header"
 import { ArrowRight, Home } from "lucide-react"
 
 const PrivacyPolicyPage = () => {
   const t = useTranslations("Privacy")
-
+  const locale = useLocale()
   return (
     <>
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
         
-        {/* Professional Grid Background */}
+         <div className='p-10'>
+                <Link
+                  href={`/${locale}`}
+                  className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
+                >
+                  <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
+                  {t('backToHome')}
+                  <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
+                </Link>
+              </div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
         
         {/* Subtle Background Orbs */}
@@ -26,14 +35,7 @@ const PrivacyPolicyPage = () => {
             
             {/* Header Section */}
             <div className="mb-12">
-              <Link 
-                href="/" 
-                className='inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 group text-sm font-semibold text-white shadow-lg mb-8'
-              >
-                <Home className='h-5 w-5 mr-3 group-hover:scale-110 transition-transform duration-300 text-blue-300' />
-                <span>{t('backToHome')}</span>
-                <ArrowRight className='h-5 w-5 ml-3 rotate-180 group-hover:scale-110 transition-transform duration-300 text-blue-300' />
-              </Link>
+            
               
               <div className="text-center mb-8">
                 <h1 className="text-5xl md:text-6xl font-black mb-4 bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent">

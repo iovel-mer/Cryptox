@@ -1,12 +1,14 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Header } from "../components/Header/Header";
 import Link from "next/link";
 import { ArrowRight, Home, BookOpen, Shield, TrendingUp, Lightbulb } from "lucide-react";
 
 const page = () => {
   const t = useTranslations("docs");
+  const locale = useLocale()
+
 
   return (
     <>
@@ -22,7 +24,7 @@ const page = () => {
 
         <div className="relative z-10">
         <Link 
-              href="/" 
+              href={`/${locale}`}
               className='inline-flex items-center px-6 py-3 mb-14 text-white bg-violet-500/10 backdrop-blur-sm rounded-full border border-violet-300/30 hover:bg-violet-500/20 hover:border-violet-400/40 transition-all duration-300 group text-sm font-medium  shadow-lg hover:shadow-violet-500/20'
             >
               <Home className='h-4 w-4 mr-2 text-white group-hover:-translate-x-1 transition-transform duration-300' />

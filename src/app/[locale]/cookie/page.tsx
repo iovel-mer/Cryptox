@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Header } from "../components/Header/Header"
@@ -9,14 +9,22 @@ import { ArrowRight, Home } from "lucide-react"
 
 export default function CookiePage() {
   const t = useTranslations("Cookie")
+  const locale = useLocale()
 
   return (
     <>
       <Header />
       <main className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
-        
-        {/* Dynamic Background Elements */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,69,19,0.08)_2px,transparent_2px),linear-gradient(90deg,rgba(139,69,19,0.08)_2px,transparent_2px)] bg-[size:60px_60px]"></div>
+         <div className='p-10'>
+                <Link
+                  href={`/${locale}`}
+                  className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
+                >
+                  <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
+                  {t('backToHome')}
+                  <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
+                </Link>
+              </div>
         
        
         {/* Large Background Orbs */}
@@ -28,14 +36,7 @@ export default function CookiePage() {
             
             {/* Header Section */}
             <div className="text-center mb-16 ">
-               <Link
-                  href="/"
-                  className='inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300 group text-sm font-medium text-white'
-                >
-                  <Home className='h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform duration-300' />
-                  {t('backToHome')}
-                  <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
-                </Link>
+              
               
              
 
