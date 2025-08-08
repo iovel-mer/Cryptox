@@ -38,7 +38,7 @@ export default function TermsOfServicePage() {
                   2. Trading Services
                 </h3>
                 <p className="mb-4">
-                  Cryptox provides cryptocurrency trading services. All
+                  CryptoX provides cryptocurrency trading services. All
                   trades are executed at your own risk.
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function TermsOfServicePage() {
                   7. Limitation of Liability
                 </h3>
                 <p className="mb-4">
-                  Cryptox shall not be liable for any indirect, incidental,
+                  CryptoX shall not be liable for any indirect, incidental,
                   special, consequential, or punitive damages.
                 </p>
               </div>

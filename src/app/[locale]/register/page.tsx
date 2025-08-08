@@ -426,7 +426,7 @@ export default function RegisterPage() {
               <Button
                 type="submit"
                 disabled={isLoading}
-                className="w-full bg-black text-white font-black py-3 uppercase tracking-wider font-mono  transition-all duration-200 transform hover:scale-105"
+                className="w-full bg-green-700 text-white font-black py-3 uppercase tracking-wider font-mono  transition-all duration-200 transform hover:scale-105"
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center">

@@ -126,7 +126,7 @@
   },
 "about": {
       "backToHome": "Back to Home",
-      "title": "About Cryptox",
+      "title": "About CryptoX",
       "subtitle": "Pioneering decentralized autonomous exchanges through multi-dimensional blockchain protocols and synthetic asset generation.",
       "missionTitle": "Our Purpose",
       "missionText": "To architect the first truly autonomous digital economy where smart contracts orchestrate seamless value transfer across infinite parallel blockchain dimensions.",
@@ -811,7 +811,7 @@
     },
     "section3": {
       "title": "Third-Party Integrations",
-      "text": "Cryptox works with platforms like Etherscan and Chainlink to enrich the data we present to users."
+      "text": "CryptoX works with platforms like Etherscan and Chainlink to enrich the data we present to users."
     },
     "section4": {
       "title": "User Control & Privacy",
@@ -819,11 +819,11 @@
     },
     "section5": {
       "title": "User Consent",
-      "text": "By using Cryptox, you accept our blockchain data usage practices. You can revoke access anytime from your profile settings."
+      "text": "By using CryptoX, you accept our blockchain data usage practices. You can revoke access anytime from your profile settings."
     },
     "section6": {
       "title": "Updates & Revisions",
-      "text": "Cryptox may change data policies. We'll notify you via email or in-app before changes take effect."
+      "text": "CryptoX may change data policies. We'll notify you via email or in-app before changes take effect."
     },
     "lastReviewed": "Last reviewed: July 2025"
   },

@@ -71,10 +71,10 @@ export const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 py-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8 items-center min-h-screen">
+        <div className="grid lg:grid-cols-12 gap-8  items-center min-h-screen">
           {/* Hero Content */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
-            <div className="space-y-6">
+            <div className="space-y-6 ml-10 pb-70">
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tight">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">{t("nextGen")}</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 animate-pulse">{t("trading")}</span>
@@ -90,42 +90,15 @@ export const Hero: React.FC = () => {
                   <Globe size={18} className="text-green-400 animate-pulse" />
                   <span className="text-green-300">{t("specs.uptime")}</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-black/50 border border-purple-400/30 rounded-full">
-                  <Star size={18} className="text-purple-400 animate-pulse" />
-                  <span className="text-purple-300">{t("specs.grade")}</span>
-                </div>
+                
               </div>
             </div>
 
-            <p className="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">{t("description")}</p>
+            
 
-            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 pt-4">
-              <Link href={`/${locale}/login`}>
-                <Button className="group relative overflow-hidden flex items-center gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold bg-blue-500 text-white hover:scale-105 transition-all">
-                  <UserPlus size={18} className="relative z-10 group-hover:rotate-12 transition-transform" />
-                  <span className="relative z-10">{t("startTrading")}</span>
-                </Button>
-              </Link>
-            </div>
+           
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-8">
-              <div className="relative bg-black/60 border border-green-400/30 rounded-3xl p-6 text-center">
-                <DollarSign size={28} className="text-green-400 mx-auto mb-3" />
-                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-green-400 to-emerald-300 bg-clip-text text-transparent mb-2">$2.4T</div>
-                <div className="text-xs text-green-300 uppercase font-bold">{t("stats.volume")}</div>
-              </div>
-              <div className="relative bg-black/60 border border-cyan-400/30 rounded-3xl p-6 text-center">
-                <Users size={28} className="text-cyan-400 mx-auto mb-3" />
-                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-cyan-400 to-blue-300 bg-clip-text text-transparent mb-2">5.7M</div>
-                <div className="text-xs text-cyan-300 uppercase font-bold">{t("stats.traders")}</div>
-              </div>
-              <div className="relative bg-black/60 border border-purple-400/30 rounded-3xl p-6 text-center">
-                <TrendingUp size={28} className="text-purple-400 mx-auto mb-3" />
-                <div className="text-3xl sm:text-4xl font-black bg-gradient-to-r from-purple-400 to-pink-300 bg-clip-text text-transparent mb-2">0.08%</div>
-                <div className="text-xs text-purple-300 uppercase font-bold">{t("stats.fees")}</div>
-              </div>
-            </div>
+            
           </div>
 
           {/* Market Terminal */}
