@@ -69,7 +69,7 @@ export default function Footer() {
                                    </span>
                  </div>
               </div>
-              <p className='text-green-100 mb-6 max-w-sm text-lg leading-relaxed font-mono'>
+              <p className='text-green-100 mb-6 text-left text-lg leading-relaxed font-mono'>
                 {tFooter('description')}
               </p>
               
@@ -136,13 +136,7 @@ export default function Footer() {
           {/* Legal Info Section */}
           <div className='relative  p-8 mb-12 overflow-hidden shadow-2xl shadow-green-400/20'
                style={{clipPath: 'polygon(2% 0%, 98% 0%, 100% 15%, 98% 100%, 2% 100%, 0% 85%)'}}>
-            
-            {/* Corner Circuits */}
-            {/* <div className="absolute top-2 left-2 w-6 h-6 border-l-2 border-t-2 border-green-400/70 shadow-[0_0_10px_rgba(0,255,0,0.5)]"></div>
-            <div className="absolute top-2 right-2 w-6 h-6 border-r-2 border-t-2 border-cyan-400/70 shadow-[0_0_10px_rgba(0,255,255,0.5)]"></div>
-            <div className="absolute bottom-2 left-2 w-6 h-6 border-l-2 border-b-2 border-blue-400/70 shadow-[0_0_10px_rgba(0,100,255,0.5)]"></div>
-            <div className="absolute bottom-2 right-2 w-6 h-6 border-r-2 border-b-2 border-purple-400/70 shadow-[0_0_10px_rgba(128,0,255,0.5)]"></div>
-             */}
+           
             {/* Data Stream Animation */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-green-400 to-transparent animate-pulse"></div>
             
@@ -155,7 +149,7 @@ export default function Footer() {
           </div>
 
           {/* Copyright with Terminal Style */}
-          <div className="text-center relative">
+          <div className="text-left relative">
             <div className="inline-flex items-center space-x-4 px-6 py-3 bg-gradient-to-r from-gray-800/50 to-black/50 backdrop-blur-sm border border-green-400/30 font-mono"
                  style={{clipPath: 'polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%)'}}>
               <span className="text-green-400 animate-pulse"></span>

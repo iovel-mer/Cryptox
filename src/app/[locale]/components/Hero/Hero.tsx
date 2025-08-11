@@ -62,21 +62,16 @@ export const Hero: React.FC = () => {
     }).format(price)
 
   return (
-    <section className=" bg-black relative text-white overflow-hidden mt-10">
-      {/* Animated Background */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-black to-purple-900/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(168,85,247,0.03)_1px,transparent_1px),linear-gradient(-45deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:30px_30px] animate-pulse"></div>
-      </div>
+    <section className=" bg-black relative text-white overflow-hidden pt-10">
+     
 
       <div className="container mx-auto px-4 sm:px-6 py-8 relative ">
         <div className="grid lg:grid-cols-12 gap-8  items-center ">
           {/* Hero Content */}
-          <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
+          <div className="lg:col-span-7  text-center lg:text-left">
           
-            <div className="space-y-6 ml-10 pb-70">
-    <h2 className="text-xl  font-semibold text-cyan-400 uppercase tracking-wide mb-2 ">
+            <div className="space-y-6 ml-10 pb-70 mb-15">
+    <h2 className="text-xl  font-semibold border-2 text-cyan-400 p-4 w-[230px] uppercase tracking-wide mb-2 ">
     {t("liveMarketData")}
   </h2>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tight">
