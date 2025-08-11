@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import { Header } from "../components/Header/Header";
 import Link from "next/link";
-import { ArrowRight, Home, BookOpen, Shield, TrendingUp, Lightbulb } from "lucide-react";
+import { ArrowRight, Home, BookOpen, Shield, TrendingUp, Lightbulb, ArrowLeft } from "lucide-react";
 
 const page = () => {
   const t = useTranslations("docs");
@@ -13,24 +13,27 @@ const page = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen relative bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white py-12 px-6 md:px-20 overflow-hidden">
-        {/* Static Background Patterns */}
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(34,197,94,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(59,130,246,0.15),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(168,85,247,0.1),transparent_60%)]"></div>
-          <div className="absolute inset-0 bg-[linear-gradient(60deg,rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(-60deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:35px_35px] pointer-events-none"></div>
+      <main className="min-h-screen relative container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white py-12 px-6 md:px-20 overflow-hidden">
+<div>
+           <Link
+  href={`/${locale}`}
+  className=" m-15
+    inline-flex items-center gap-2
+    border-2 border-white
+    bg-transparent
+    text-white
+    rounded-full
+    px-4 py-2
+    text-sm font-medium
+    transition
+    shadow-sm
+  "
+>
+  <ArrowLeft size={18} />
+  <span>{t('backToHome')}</span>
+</Link>
         </div>
-
-        <div className="relative z-10">
-        <Link 
-              href={`/${locale}`}
-              className='inline-flex items-center px-6 py-3 mb-14 text-white bg-violet-500/10 backdrop-blur-sm rounded-full border border-violet-300/30 hover:bg-violet-500/20 hover:border-violet-400/40 transition-all duration-300 group text-sm font-medium  shadow-lg hover:shadow-violet-500/20'
-            >
-              <Home className='h-4 w-4 mr-2 text-white group-hover:-translate-x-1 transition-transform duration-300' />
-              {t('backToHome')}
-              <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
-            </Link>
+        
 
           <div className="max-w-5xl mx-auto mt-8 space-y-12">
             <div className="text-center mb-16">
@@ -111,7 +114,7 @@ const page = () => {
               </section>
             ))}
           </div>
-        </div>
+        
       </main>
     </>
   );

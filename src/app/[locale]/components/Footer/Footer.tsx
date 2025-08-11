@@ -116,7 +116,7 @@ export default function Footer() {
                     <li key={link} className="relative group">
                       <Link
                         href={routeMapping[link as keyof typeof routeMapping]}
-                        className='text-gray-300 hover:text-white transition-all duration-300 cursor-pointer font-mono text-base relative inline-block group-hover:text-green-400'
+                        className='text-gray-300 hover:text-white transition-all duration-300 cursor-pointer font-mono text-base relative inline-block '
                       >
                         <span className="relative z-10">
                           {tFooter(
@@ -125,10 +125,6 @@ export default function Footer() {
                             ]
                           )}
                         </span>
-                        {/* Hover glow effect */}
-                        <div className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r ${section.color} w-0 group-hover:w-full transition-all duration-300 ${section.glow}`}></div>
-                        {/* Side glow */}
-                        <div className={`absolute inset-0 bg-gradient-to-r ${section.color} opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300`}></div>
                       </Link>
                     </li>
                   ))}

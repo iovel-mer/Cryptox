@@ -18,7 +18,7 @@
     "loggingOut": "Logging out..."
   },
    "hero": {
-    "liveMarkets": "Live Markets",
+    "liveMarketData": "Live Market Data",
     "Advanced": "Advanced Analytics",
     "USD":"USD Trading Pair",
     "nextGen": "Smart",

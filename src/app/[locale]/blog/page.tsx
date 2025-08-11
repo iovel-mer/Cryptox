@@ -13,6 +13,7 @@ import {
   User,
   Home,
   ArrowRight,
+  ArrowLeft,
 } from "lucide-react";
 import Link from "next/link";
 
@@ -34,18 +35,33 @@ const Page = () => {
   return (
     <>
       <Header />
-    <div className="min-h-screen  bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative">
+    <div className="min-h-screen container mx-auto py-16  bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative">
+         {/* BACK TO HOME BUTTON */}
+        <div>
+           <Link
+  href={`/${locale}`}
+  className=" m-15
+    inline-flex items-center gap-2
+    border-2 border-white
+    bg-transparent
+    text-white
+    rounded-full
+    px-4 py-2
+    text-sm font-medium
+    transition
+    shadow-sm
+  "
+>
+  <ArrowLeft size={18} />
+  <span>{t('backToHome')}</span>
+</Link>
+        </div>
       <div className="absolute inset-0 z-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+      <div className="absolute top-20 right-16 w-48 h-48 bg-gradient-to-br from-pink-500/30 to-purple-500/30 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-br from-blue-500/25 to-cyan-500/25 rounded-full blur-3xl animate-bounce" style={{animationDuration: '4s'}}></div>
+        <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-gradient-to-br from-orange-500/35 to-red-500/35 rounded-full blur-2xl animate-ping" style={{animationDuration: '3s'}}></div>
+
       <main className="container mx-auto px-4 py-8 md:py-12 lg:py-16">
-        <div className="max-w-7xl mx-auto">
-         <Link 
-             href={`/${locale}`}
-              className='inline-flex items-center px-6 py-3 mb-14 text-white bg-violet-500/10 backdrop-blur-sm rounded-full border border-violet-300/30 hover:bg-violet-500/20 hover:border-violet-400/40 transition-all duration-300 group text-sm font-medium  shadow-lg hover:shadow-violet-500/20'
-            >
-              <Home className='h-4 w-4 mr-2 text-white group-hover:-translate-x-1 transition-transform duration-300' />
-              {t('backToHome')}
-              <ArrowRight className='h-4 w-4 ml-2 rotate-180 group-hover:-translate-x-1 transition-transform duration-300' />
-            </Link>
           {/* Hero Section */}
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl mb-6">
@@ -94,7 +110,7 @@ const Page = () => {
               </article>
             </div>
           
-        </div>
+        
       </main>
     </div>
     </>

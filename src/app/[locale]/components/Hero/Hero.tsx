@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
     }).format(price)
 
   return (
-    <section className="min-h-screen bg-black relative text-white overflow-hidden">
+    <section className=" bg-black relative text-white overflow-hidden mt-10">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-black to-purple-900/20"></div>
@@ -70,24 +70,28 @@ export const Hero: React.FC = () => {
         <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(168,85,247,0.03)_1px,transparent_1px),linear-gradient(-45deg,rgba(6,182,212,0.03)_1px,transparent_1px)] bg-[size:30px_30px] animate-pulse"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 py-8 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-8  items-center min-h-screen">
+      <div className="container mx-auto px-4 sm:px-6 py-8 relative ">
+        <div className="grid lg:grid-cols-12 gap-8  items-center ">
           {/* Hero Content */}
           <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
+          
             <div className="space-y-6 ml-10 pb-70">
+    <h2 className="text-xl  font-semibold text-cyan-400 uppercase tracking-wide mb-2 ">
+    {t("liveMarketData")}
+  </h2>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tight">
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300">{t("nextGen")}</span>
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 animate-pulse">{t("trading")}</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 ">{t("trading")}</span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">{t("platform")}</span>
               </h1>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-4 sm:gap-6 text-base sm:text-lg font-mono">
                 <div className="flex items-center gap-2 px-4 py-2 bg-black/50 border border-yellow-400/30 rounded-full">
-                  <Zap size={18} className="text-yellow-400 animate-pulse" />
+                  <Zap size={18} className="text-yellow-400 " />
                   <span className="text-yellow-300">{t("specs.execution")}</span>
                 </div>
                 <div className="flex items-center gap-2 px-4 py-2 bg-black/50 border border-green-400/30 rounded-full">
-                  <Globe size={18} className="text-green-400 animate-pulse" />
+                  <Globe size={18} className="text-green-400 " />
                   <span className="text-green-300">{t("specs.uptime")}</span>
                 </div>
                 
