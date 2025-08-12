@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
@@ -22,18 +22,37 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
-import { Mail, Phone, Users, Clock, Home, ArrowRight, ArrowLeft } from "lucide-react";
+import { Mail, Phone, Users, Clock, ArrowLeft } from "lucide-react";
 import { Header } from "../components/Header/Header";
 
-const ContactPage = () => {
+export default function ContactPage() {
   const t = useTranslations("contact");
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const router = useRouter();
-   const locale = useLocale()
+  const locale = useLocale();
+
+  // Form states
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+  const [isFormValid, setIsFormValid] = useState(false);
+
+  // Email validation regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  useEffect(() => {
+    const valid =
+      name.trim().length > 0 &&
+      emailRegex.test(email) &&
+      subject.trim().length > 0 &&
+      message.trim().length > 0;
+    setIsFormValid(valid);
+  }, [name, email, subject, message]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSuccessMessage("✨ Your message has been sent successfully!");
+    if (!isFormValid) return;
+
     setTimeout(() => {
       router.push("/");
     }, 2000);
@@ -69,44 +88,37 @@ const ContactPage = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen container mx-auto py-16 px-4 sm:px-6 lg:px-8  bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
-        {/* BACK TO HOME BUTTON */}
+      <div className="min-h-screen container mx-auto py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
+        {/* Back to Home */}
         <div>
-           <Link
-  href={`/${locale}`}
-  className=" m-15
-    inline-flex items-center gap-2
-    border-2 border-white
-    bg-transparent
-    text-white
-    rounded-full
-    px-4 py-2
-    text-sm font-medium
-    transition
-    shadow-sm
-  "
->
-  <ArrowLeft size={18} />
-  <span>{t('backToHome')}</span>
-</Link>
+          <Link
+            href={`/${locale}`}
+            className="m-15 inline-flex items-center gap-2 border-2 border-white bg-transparent text-white rounded-full px-4 py-2 text-sm font-medium transition shadow-sm"
+          >
+            <ArrowLeft size={18} />
+            <span>{t("backToHome")}</span>
+          </Link>
         </div>
-       
 
         {/* Floating Elements */}
         <div className="absolute top-20 right-16 w-48 h-48 bg-gradient-to-br from-pink-500/30 to-purple-500/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-br from-blue-500/25 to-cyan-500/25 rounded-full blur-3xl animate-bounce" style={{animationDuration: '4s'}}></div>
-        <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-gradient-to-br from-orange-500/35 to-red-500/35 rounded-full blur-2xl animate-ping" style={{animationDuration: '3s'}}></div>
+        <div
+          className="absolute bottom-20 left-20 w-64 h-64 bg-gradient-to-br from-blue-500/25 to-cyan-500/25 rounded-full blur-3xl animate-bounce"
+          style={{ animationDuration: "4s" }}
+        ></div>
+        <div
+          className="absolute top-1/2 right-1/4 w-32 h-32 bg-gradient-to-br from-orange-500/35 to-red-500/35 rounded-full blur-2xl animate-ping"
+          style={{ animationDuration: "3s" }}
+        ></div>
 
         <div className="max-w-5xl mx-auto relative z-10">
-          {/* Back to Home Link */}
-          
-
-          {/* Hero Section */}
           <div className="text-center mb-20">
-            <h1 className="text-6xl sm:text-7xl font-black  mb-6 bg-gradient-to-r from-pink-300 via-purple-200 to-blue-300 bg-clip-text text-transparent leading-tight">
+            <h1 className="text-6xl sm:text-7xl font-black mb-6 bg-gradient-to-r from-pink-300 via-purple-200 to-blue-300 bg-clip-text text-transparent leading-tight">
               {t("title")}
             </h1>
-            <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto">{t("subtitle")}</p>
+            <p className="text-xl text-gray-300 font-light max-w-2xl mx-auto">
+              {t("subtitle")}
+            </p>
           </div>
         </div>
 
@@ -115,16 +127,22 @@ const ContactPage = () => {
             {/* Contact Options */}
             <div className="space-y-8">
               {contactOptions.map((item, index) => (
-                <Card key={index} className="group relative bg-gradient-to-br from-gray-800/60 to-slate-900/70 backdrop-blur-xl border border-gray-600/40 hover:border-gray-400/60 transition-all duration-500 hover:scale-105 cursor-pointer overflow-hidden rounded-3xl shadow-2xl">
-                  {/* Glow Effect */}
-                  <div className={`absolute -inset-1 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-500 blur-2xl rounded-3xl`} />
-                  
-                  {/* Background Pattern */}
-                  <div className={`absolute inset-0 ${item.bgGlow} opacity-40 group-hover:opacity-60 transition-opacity duration-500 rounded-3xl`}></div>
+                <Card
+                  key={index}
+                  className="group relative bg-gradient-to-br from-gray-800/60 to-slate-900/70 backdrop-blur-xl border border-gray-600/40 hover:border-gray-400/60 transition-all duration-500 hover:scale-105 cursor-pointer overflow-hidden rounded-3xl shadow-2xl"
+                >
+                  <div
+                    className={`absolute -inset-1 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-500 blur-2xl rounded-3xl`}
+                  />
+                  <div
+                    className={`absolute inset-0 ${item.bgGlow} opacity-40 group-hover:opacity-60 transition-opacity duration-500 rounded-3xl`}
+                  ></div>
 
                   <CardHeader className="relative z-10">
                     <CardTitle className="flex items-center gap-4 text-2xl font-black text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-200 group-hover:bg-clip-text transition-all duration-300">
-                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <div
+                        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${item.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      >
                         <item.icon className="h-6 w-6 text-white" />
                       </div>
                       {item.title}
@@ -138,18 +156,17 @@ const ContactPage = () => {
                       <Clock className="h-5 w-5 text-gray-400" /> {item.hours}
                     </p>
                   </CardContent>
-                  
-                  {/* Bottom Accent */}
-                  <div className={`absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r ${item.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center rounded-b-3xl`} />
+                  <div
+                    className={`absolute bottom-0 left-0 right-0 h-2 bg-gradient-to-r ${item.gradient} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-center rounded-b-3xl`}
+                  />
                 </Card>
               ))}
             </div>
 
             {/* Contact Form */}
             <Card className="h-fit shadow-2xl border border-gray-600/40 bg-gradient-to-br from-gray-800/60 to-slate-900/70 backdrop-blur-xl rounded-3xl overflow-hidden">
-              {/* Form Glow Effect */}
               <div className="absolute -inset-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-0 hover:opacity-20 transition-opacity duration-500 blur-2xl rounded-3xl"></div>
-              
+
               <CardHeader className="relative z-10 pb-6">
                 <CardTitle className="text-3xl text-white font-black bg-gradient-to-r from-pink-300 to-purple-300 bg-clip-text ">
                   {t("form.title")}
@@ -158,73 +175,87 @@ const ContactPage = () => {
                   {t("form.description")}
                 </CardDescription>
               </CardHeader>
+
               <CardContent className="relative z-10">
                 <form onSubmit={handleSubmit} className="space-y-6">
+                  {/* Name */}
                   <div className="grid gap-3">
-                    <Label htmlFor="name" className="text-white font-semibold text-base">{t("form.name")}</Label>
+                    <Label htmlFor="name" className="text-white font-semibold text-base">
+                      {t("form.name")}
+                    </Label>
                     <Input
-                      className="text-white bg-gray-700/50 border-gray-600/50 focus:border-pink-400/50 rounded-xl h-12 text-base backdrop-blur-sm"
                       id="name"
                       name="name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       placeholder="John Doe"
+                      className="text-white bg-gray-700/50 border-gray-600/50 focus:border-pink-400/50 rounded-xl h-12 text-base backdrop-blur-sm"
                     />
                   </div>
+
+                  {/* Email */}
                   <div className="grid gap-3">
-                    <Label htmlFor="email" className="text-white font-semibold text-base">{t("form.email")}</Label>
+                    <Label htmlFor="email" className="text-white font-semibold text-base">
+                      {t("form.email")}
+                    </Label>
                     <Input
-                      className="text-white bg-gray-700/50 border-gray-600/50 focus:border-pink-400/50 rounded-xl h-12 text-base backdrop-blur-sm"
                       id="email"
                       name="email"
                       type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                       placeholder="you@example.com"
+                      className="text-white bg-gray-700/50 border-gray-600/50 focus:border-pink-400/50 rounded-xl h-12 text-base backdrop-blur-sm"
                     />
                   </div>
+
+                  {/* Subject */}
                   <div className="grid gap-3">
-                    <Label htmlFor="subject" className="text-white font-semibold text-base">{t("form.subject")}</Label>
-                    <Select name="subject">
-                      <SelectTrigger className="text-white bg-gray-700/50 border-gray-600/50 focus:border-pink-400/50 rounded-xl h-12 text-base backdrop-blur-sm" id="subject">
+                    <Label htmlFor="subject" className="text-white font-semibold text-base">
+                      {t("form.subject")}
+                    </Label>
+                    <Select
+                      value={subject}
+                      onValueChange={(val) => setSubject(val)}
+                    >
+                      <SelectTrigger
+                        id="subject"
+                        className="text-white bg-gray-700/50 border-gray-600/50 focus:border-pink-400/50 rounded-xl h-12 text-base backdrop-blur-sm"
+                      >
                         <SelectValue placeholder={t("form.placeholder")} />
                       </SelectTrigger>
                       <SelectContent className="bg-gray-800 border-gray-600 rounded-xl">
-                        <SelectItem value="general" className="text-white hover:bg-gray-700">
-                          {t("form.options.general")}
-                        </SelectItem>
-                        <SelectItem value="technical" className="text-white hover:bg-gray-700">
-                          {t("form.options.technical")}
-                        </SelectItem>
-                        <SelectItem value="billing" className="text-white hover:bg-gray-700">
-                          {t("form.options.billing")}
-                        </SelectItem>
-                        <SelectItem value="partnership" className="text-white hover:bg-gray-700">
-                          {t("form.options.partnership")}
-                        </SelectItem>
-                        <SelectItem value="other" className="text-white hover:bg-gray-700">
-                          {t("form.options.other")}
-                        </SelectItem>
+                        <SelectItem value="general">{t("form.options.general")}</SelectItem>
+                        <SelectItem value="technical">{t("form.options.technical")}</SelectItem>
+                        <SelectItem value="billing">{t("form.options.billing")}</SelectItem>
+                        <SelectItem value="partnership">{t("form.options.partnership")}</SelectItem>
+                        <SelectItem value="other">{t("form.options.other")}</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
+
+                  {/* Message */}
                   <div className="grid gap-3">
-                    <Label htmlFor="message" className="text-white font-semibold text-base">{t("form.message")}</Label>
+                    <Label htmlFor="message" className="text-white font-semibold text-base">
+                      {t("form.message")}
+                    </Label>
                     <Textarea
                       id="message"
                       name="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       placeholder={t("form.placeholderMessage")}
                       className="min-h-[140px] text-white bg-gray-700/50 border-gray-600/50 focus:border-pink-400/50 rounded-xl text-base backdrop-blur-sm resize-none"
                     />
                   </div>
+
                   <Button
                     type="submit"
+                    disabled={!isFormValid}
                     className="w-full text-lg font-bold bg-black text-white hover:from-pink-600 hover:via-purple-600 hover:to-blue-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-purple-500/30 hover:scale-105 rounded-xl h-14"
                   >
                     {t("form.button")}
                   </Button>
-
-                  {successMessage && (
-                    <div className="text-emerald-400 text-base text-center mt-6 p-4 bg-emerald-500/10 rounded-xl border border-emerald-500/20 backdrop-blur-sm">
-                      {successMessage}
-                    </div>
-                  )}
                 </form>
               </CardContent>
             </Card>
@@ -235,4 +266,4 @@ const ContactPage = () => {
   );
 };
 
-export default ContactPage;
+

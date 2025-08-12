@@ -45,7 +45,6 @@ export default function Footer() {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-conic from-purple-400/15 via-pink-400/15 to-red-400/15 rounded-full blur-3xl animate-spin" style={{animationDuration: '35s', animationDirection: 'reverse'}}></div>
         
         {/* Neon Border Top */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-green-400 via-cyan-400 to-blue-400 animate-pulse shadow-[0_0_20px_rgba(0,255,255,0.5)]"></div>
         
         {/* Floating Data Points */}
         <div className="absolute top-20 left-20 w-2 h-2 bg-green-400 rounded-full animate-ping opacity-80"></div>
@@ -53,7 +52,7 @@ export default function Footer() {
         <div className="absolute bottom-40 left-1/3 w-1.5 h-1.5 bg-blue-400 rounded-full animate-ping opacity-80" style={{animationDelay: '1s'}}></div>
         <div className="absolute bottom-60 right-1/4 w-1 h-1 bg-purple-400 rounded-full animate-ping opacity-80" style={{animationDelay: '1.5s'}}></div>
 
-        <div className='container mx-auto relative z-10'>
+        <div className='container mx-auto relative z-10 text-center'>
           <div className='grid md:grid-cols-2 lg:grid-cols-6 gap-10 mb-8'>
             <div className='lg:col-span-2 md:col-span-2 px-8'>
               <div className='flex items-center space-x-3 mb-6'>
@@ -107,7 +106,7 @@ export default function Footer() {
                 glow: 'shadow-purple-400/30'
               },
             ].map((section, index) => (
-              <div key={section.title} className='md:col-span-1'>
+              <div key={section.title} className='md:col-span-1 text-left'>
                 <h3 className={`font-black mb-6 text-lg uppercase tracking-wider bg-gradient-to-r ${section.color} bg-clip-text text-transparent font-mono drop-shadow-lg`}>
                   {section.title}
                 </h3>
@@ -134,7 +133,7 @@ export default function Footer() {
           </div>
           
           {/* Legal Info Section */}
-          <div className='relative  p-8 mb-12 overflow-hidden shadow-2xl shadow-green-400/20'
+          <div className='relative  p-8 mb-12 overflow-hidden shadow-2xl shadow-green-400/20 text-left'
                style={{clipPath: 'polygon(2% 0%, 98% 0%, 100% 15%, 98% 100%, 2% 100%, 0% 85%)'}}>
            
             {/* Data Stream Animation */}
@@ -149,11 +148,11 @@ export default function Footer() {
           </div>
 
           {/* Copyright with Terminal Style */}
-          <div className="text-left relative">
-            <div className="inline-flex items-center space-x-4 px-6 py-3 bg-gradient-to-r from-gray-800/50 to-black/50 backdrop-blur-sm border border-green-400/30 font-mono"
+          <div className="text-center relative">
+            <div className="inline-flex items-center space-x-4 px-6 py-3 bg-gradient-to-r from-gray-800/50 to-black/50 backdrop-blur-sm  font-mono"
                  style={{clipPath: 'polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%)'}}>
               <span className="text-green-400 animate-pulse"></span>
-              <span className="text-gray-300">
+              <span className="text-gray-300 ">
                 © {new Date().getFullYear()} CryptoX {tFooter('rights')}
                  
               </span>

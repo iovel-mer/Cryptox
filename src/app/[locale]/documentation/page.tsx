@@ -13,7 +13,7 @@ const page = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen relative container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white py-12 px-6 md:px-20 overflow-hidden">
+      <main className="min-h-screen text-center sm:text-left relative container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white py-12 px-6 md:px-20 overflow-hidden">
 <div>
            <Link
   href={`/${locale}`}
@@ -37,7 +37,7 @@ const page = () => {
 
           <div className="max-w-5xl mx-auto mt-8 space-y-12">
             <div className="text-center mb-16">
-              <h1 className="text-6xl md:text-7xl font-black mb-6 text-white">
+              <h1 className="text-6xl md:text-7xl font-black mb-6 text-white text-center">
                 {t("title")}
               </h1>
             </div>
@@ -106,7 +106,7 @@ const page = () => {
                     <div className={`w-12 h-12 bg-gradient-to-br ${colors} rounded-xl flex items-center justify-center shadow-lg`}>
                       {icon}
                     </div>
-                    <h2 className="text-3xl font-black mb-0 text-white">{title}</h2>
+                    <h2 className="text-3xl text-left font-black mb-0 text-white">{title}</h2>
                   </div>
                   {text && <p className="text-gray-300 text-lg leading-relaxed font-medium">{text}</p>}
                   {content}

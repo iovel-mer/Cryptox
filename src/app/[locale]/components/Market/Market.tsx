@@ -95,7 +95,7 @@ export const Market: React.FC = () => {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-purple-900 min-h-screen relative overflow-hidden">
+    <section className="py-20 border-b-2 border-gray-200 bg-gradient-to-br from-black via-gray-900 to-purple-900 min-h-screen relative overflow-hidden">
       {/* Cyberpunk Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
 

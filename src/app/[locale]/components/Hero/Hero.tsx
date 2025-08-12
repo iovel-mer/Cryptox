@@ -62,16 +62,25 @@ export const Hero: React.FC = () => {
     }).format(price)
 
   return (
-    <section className=" bg-black relative text-white overflow-hidden pt-10">
-     
-
-      <div className="container mx-auto px-4 sm:px-6 py-8 relative ">
+    <section className=" bg-black relative border-b-2 border-gray-200 text-white overflow-hidden pt-10">
+      <div className="container mx-auto px-4 sm: mb-50  py-8 relative ">
         <div className="grid lg:grid-cols-12 gap-8  items-center ">
           {/* Hero Content */}
           <div className="lg:col-span-7  text-center lg:text-left">
           
-            <div className="space-y-6 ml-10 pb-70 mb-15">
-    <h2 className="text-xl  font-semibold border-2 text-cyan-400 p-4 w-[230px] uppercase tracking-wide mb-2 ">
+            <div className="space-y-6 ">
+    <h2 className=" text-xl 
+    mb-5 
+    font-semibold 
+    border-2 
+    text-cyan-400 
+    p-4 
+    w-[230px] 
+    uppercase 
+    tracking-wide
+    mx-auto      
+    md:mx-0      
+    md:text-left   ">
     {t("liveMarketData")}
   </h2>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black leading-tight tracking-tight">
@@ -101,7 +110,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Market Terminal */}
-          <div className="lg:col-span-5 w-full mb-85">
+          <div className="lg:col-span-5 w-full ">
             <Card className="bg-black/80 border border-cyan-400/30 rounded-3xl overflow-hidden">
               <CardHeader className="p-4 sm:p-6 border-b border-cyan-400/20 flex flex-col sm:flex-row justify-between items-center gap-4">
                 <div className="flex items-center gap-4">
