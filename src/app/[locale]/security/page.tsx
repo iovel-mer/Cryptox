@@ -31,7 +31,7 @@ export default function SecurityPage() {
   return (
     <>
       <Header />
-      <main className='min-h-screen container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white relative overflow-hidden'>
+      <main className='min-h-screen pt-20 container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white relative overflow-hidden'>
               {/* BACK TO HOME BUTTON */}
         <div>
            <Link

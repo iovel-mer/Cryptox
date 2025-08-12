@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
     }).format(price)
 
   return (
-    <section className=" bg-black relative border-b-2 border-gray-200 text-white overflow-hidden pt-10">
+    <section className=" bg-black container mx-auto relative border-b-2 border-gray-200 text-white overflow-hidden pt-10">
       <div className="container mx-auto px-4 sm: mb-50  py-8 relative ">
         <div className="grid lg:grid-cols-12 gap-8  items-center ">
           {/* Hero Content */}
@@ -141,7 +141,7 @@ export const Hero: React.FC = () => {
                             className="w-8 h-8 sm:w-10 sm:h-10"
                           />
                           <div>
-                            <div className="text-lg sm:text-xl font-bold">{coin.symbol}</div>
+                            <div className="text-lg sm:text-xl text-white font-bold">{coin.symbol}</div>
                             <div className="text-xs text-cyan-300">{t("USD")}</div>
                           </div>
                         </div>

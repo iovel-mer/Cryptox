@@ -65,7 +65,7 @@ export const Trading: React.FC = () => {
   ]
 
   return (
-    <section className="relative border-b-2 border-gray-200 py-16 px-4 mx-auto overflow-hidden min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
+    <section className="relative container mx-auto border-b-2 border-gray-200 py-16 px-4  overflow-hidden min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-800">
       {/* Matrix-style background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,0,0.03)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
       
