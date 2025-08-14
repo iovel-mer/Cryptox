@@ -90,7 +90,7 @@ export function Sidebar({ className }: SidebarProps) {
           href='/dashboard'
           className=' font-semibold'
         >
-          <span className='text-lg'>Cryptox</span>
+          <span className='text-lg'>CryptoX</span>
         </Link>
       </div>
       <nav className='flex-1 space-y-1 px-2'>

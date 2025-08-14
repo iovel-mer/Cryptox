@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
           
             <div className="space-y-6 ">
     <h2 className=" text-xl 
-    mb-5 
+    mb-5  
     font-semibold 
     border-2 
     text-cyan-400 
@@ -78,7 +78,8 @@ export const Hero: React.FC = () => {
     w-[230px] 
     uppercase 
     tracking-wide
-    mx-auto      
+    mx-auto 
+      
     md:mx-0      
     md:text-left   ">
     {t("liveMarketData")}
