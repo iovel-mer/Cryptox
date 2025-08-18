@@ -13,7 +13,7 @@ const AboutPage = () => {
     <>
       <Header />
 
-      <section className="min-h-screen container pt-20 mx-auto relative bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 overflow-hidden text-white">
+      <section className="min-h-screen  pt-20 mx-auto relative bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 overflow-hidden text-white">
         {/* BACKGROUND GRID OVERLAY */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 

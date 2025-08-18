@@ -17,7 +17,7 @@ const Page = () => {
   return (
     <>
       <Header />
-      <main className="min-h-screen text-center sm:text-left relative container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white py-8 sm:py-12 px-4 sm:px-6 md:px-20 overflow-hidden">
+      <main className="min-h-screen text-center sm:text-left relative  mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white py-8 sm:py-12 px-4 sm:px-6 md:px-20 overflow-hidden">
         {/* Back to Home */}
         <div className="mb-8">
           <Link

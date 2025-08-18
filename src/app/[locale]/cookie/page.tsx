@@ -14,7 +14,7 @@ export default function CookiePage() {
   return (
     <>
       <Header />
-      <main className="min-h-screen container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
+      <main className="min-h-screen pt-20 mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
          {/* BACK TO HOME BUTTON */}
         <div>
            <Link

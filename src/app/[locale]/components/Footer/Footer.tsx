@@ -35,7 +35,7 @@ export default function Footer() {
 
   return (
    
-      <footer className="py-16 px-6 container mx-auto sm:px-12 md:py-24 bg-gradient-to-br from-gray-900 via-black to-purple-900 relative text-white overflow-hidden">
+      <footer className="py-16 px-6  mx-auto sm:px-12 md:py-24 bg-gradient-to-br from-gray-900 via-black to-purple-900 relative text-white overflow-hidden">
         {/* Matrix Grid Background */}
         <div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,0,0.03)_1px,transparent_1px)] bg-[size:25px_25px] pointer-events-none"

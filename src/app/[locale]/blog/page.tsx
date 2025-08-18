@@ -22,7 +22,7 @@ const Page = () => {
   return (
     <>
       <Header />
-      <div className="min-h-screen container mx-auto py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+      <div className="min-h-screen  mx-auto py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden">
         {/* BACK TO HOME BUTTON */}
        <div>
            <Link

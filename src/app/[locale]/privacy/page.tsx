@@ -12,7 +12,7 @@ export default function PrivacyPage() {
   return (
     <>
       <Header />
-      <div className="min-h-screen container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen  mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 relative overflow-hidden px-4 sm:px-6 lg:px-8">
         
         {/* BACK TO HOME BUTTON */}
         <div className="mt-6 sm:mt-10">

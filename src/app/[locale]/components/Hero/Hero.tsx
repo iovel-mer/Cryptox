@@ -62,7 +62,7 @@ export const Hero: React.FC = () => {
     }).format(price)
 
   return (
-    <section className=" bg-black container mx-auto relative border-b-2 border-gray-200 text-white overflow-hidden pt-10">
+    <section className=" bg-black  mx-auto relative border-b-2 border-gray-200 text-white overflow-hidden pt-10">
       <div className="container mx-auto px-4 sm: mb-50  py-8 relative ">
         <div className="grid lg:grid-cols-12 gap-8  items-center ">
           {/* Hero Content */}

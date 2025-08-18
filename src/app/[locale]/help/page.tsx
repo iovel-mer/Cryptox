@@ -79,7 +79,7 @@ const Page = () => {
   return (
     <>
       <Header />
-      <main className=" bg-gradient-to-br container mx-auto from-slate-950 via-blue-950 to-slate-900 relative px-4 py-16 sm:px-6 lg:px-8 o min-h-screen overflow-hidden text-white">
+      <main className=" bg-gradient-to-br  mx-auto from-slate-950 via-blue-950 to-slate-900 relative px-4 py-16 sm:px-6 lg:px-8 o min-h-screen overflow-hidden text-white">
            {/* BACK TO HOME BUTTON */}
         <div>
            <Link

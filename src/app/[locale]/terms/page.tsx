@@ -12,7 +12,7 @@ export default function TermsOfService() {
   return (
     <>
       <Header />
-      <main className="min-h-screen container mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white pb-8 px-4 sm:px-6 lg:px-8 relative">
+      <main className="min-h-screen  mx-auto bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white pb-8 px-4 sm:px-6 lg:px-8 relative">
         
         {/* BACK TO HOME BUTTON */}
         <div className="pt-6 sm:pt-10">
